@@ -163,7 +163,7 @@ def trim_version(version, num_parts=2):
 
 def cpu_count():
     import multiprocessing
-    return multiprocessing.cpu_count()
+    return int(multiprocessing.cpu_count()*1.5)
 
 def execute_pre_post_process(d, cmds):
     if cmds is None:
